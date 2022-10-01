@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { CREATE_TASK } from "../../CONSTANTS";
+import { SocketType } from "../../types/socket";
 
-const AddTask = ({ socket }) => {
+const AddTask: FC<SocketType> = ({ socket }) => {
     const [task, setTask] = useState("");
 
-    const handleAddTodo = (e) => {
+    const handleAddTodo = (e: any) => {
         e.preventDefault();
         socket.emit(CREATE_TASK, { task })
         setTask("");

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
+import { CommentSectionType } from "../../types/comments";
 
-const CommentSection = ({ commentList }) => (
+const CommentSection: FC<CommentSectionType> = ({ commentList }) => (
     <>
         <h2>Existing Comments</h2>
         {commentList.map((comment) => (

@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React, { FC, useState } from "react"
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login: FC = () => {
     const [username, setUsername] = useState("");
     const navigate = useNavigate();
 
-    const handleLogin = (e) => {
+    const handleLogin = (e: any) => {
         e.preventDefault();
         localStorage.setItem("userId", username);
         setUsername("");

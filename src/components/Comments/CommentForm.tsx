@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { ADD_COMMENT } from "../../CONSTANTS";
+import { CommentFormType } from "../../types/comments";
 
-const CommentForm = ({ socket, category, id }) => {
+const CommentForm: FC<CommentFormType> = ({ socket, category, id }) => {
     const [comment, setComment] = useState("");
 
-    const addComment = (e) => {
+    const addComment = (e: any) => {
         e.preventDefault();
         socket.emit(ADD_COMMENT, {
             comment,
