@@ -10,7 +10,7 @@ const TasksBoard: FC<SocketType> = ({ socket }) => {
     const [tasks, setTasks] = useState<DataType[]>(initialDataType);
 
     const fetchTasks = () => {
-        fetch(process.env.REACT_APP_SERVER_API)
+            fetch(process.env.REACT_APP_SERVER_API)
             .then(async (res) => await res.json())
             .then((data: DataType[]) => setTasks(data))
             // eslint-disable-next-line @typescript-eslint/no-empty-function
