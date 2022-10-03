@@ -4,7 +4,8 @@ import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import { TASKS, TASK_DRAGGED } from "../../CONSTANTS";
 import { SocketType } from "../../types/socket";
 import { DataType, initialDataType, TaskItemType } from "../../types/tasks";
-import Task from "./Task";
+import Task from "../Task/Task";
+import "./TasksBoard.scss";
 
 const TasksBoard: FC<SocketType> = ({ socket }) => {
   const [tasks, setTasks] = useState<Array<DataType>>(initialDataType);
@@ -40,15 +41,15 @@ const TasksBoard: FC<SocketType> = ({ socket }) => {
   };
 
   return (
-    <div className="container">
+    <div className="cmp-tasks__board">
       <DragDropContext onDragEnd={handleDragEnd}>
         {Object.entries(tasks).map((task) => (
           <div
-            className={`${task[1].title.toLowerCase()}__wrapper`}
+            className={`cmp-tasks__board__${task[1].title.toLowerCase()}__wrapper`}
             key={task[1].title}
           >
-            <h3>{task[1].title} Tasks</h3>
-            <div className={`${task[1].title.toLowerCase()}__container`}>
+            <h3 className="cmp-tasks__board__title">{task[1].title} Tasks</h3>
+            <div className={`cmp-tasks__board__${task[1].title.toLowerCase()}__container`}>
               <Droppable droppableId={task[1].title}>
                 {(provided) => (
                   <div ref={provided.innerRef} {...provided.droppableProps}>

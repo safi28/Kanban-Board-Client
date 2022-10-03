@@ -11,7 +11,7 @@ const Task: FC<TaskType> = ({ item, index, task }) => {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          className={`${task.title.toLowerCase()}__items`}
+          className={`cmp-tasks__board__${task.title.toLowerCase()}__items`}
         >
           <p>{item.title}</p>
           <p className="comment">

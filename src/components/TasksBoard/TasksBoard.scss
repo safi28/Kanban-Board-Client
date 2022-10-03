@@ -1,0 +1,58 @@
+@import "global/variables";
+
+.cmp-tasks__board {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    min-height: 100%;
+
+    &__title {
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    &__completed__wrapper,
+    &__ongoing__wrapper,
+    &__pending__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        width: 32%;
+        min-height: 60vh;
+    }
+
+    &__pending__container,
+    &__ongoing__container,
+    &__completed__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 55vh;
+        padding: 5px;
+        border: 1px solid $light-gray;
+        border-radius: 5px;
+    }
+
+    &__pending__items {
+        background-color: $light-orange;
+    }
+
+    &__ongoing__items {
+        background-color: $light-blue;
+    }
+
+    &__completed__items {
+        background-color: $green;
+    }
+
+    &__pending__items,
+    &__ongoing__items,
+    &__completed__items {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+}

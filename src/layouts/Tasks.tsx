@@ -1,15 +1,15 @@
 import React, { FC } from "react";
 import { io } from 'socket.io-client';
-import Nav from '../components/Tasks/Nav';
-import AddTask from '../components/Tasks/AddTask';
-import TasksBoard from '../components/Tasks/TasksBoard';
+import Nav from '../components/Nav/Nav';
+import TaskForm from '../components/TaskForm/TaskForm';
+import TasksBoard from '../components/TasksBoard/TasksBoard';
 
 const socket = io(process.env.REACT_APP_SERVER_URL || "");
 
 const Tasks: FC = () => (
     <>
         <Nav />
-        <AddTask socket={socket} />
+        <TaskForm socket={socket} />
         <TasksBoard socket={socket} />
     </>
 );

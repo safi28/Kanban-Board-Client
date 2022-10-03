@@ -16,8 +16,8 @@ const CommentForm: FC<CommentFormType> = ({ socket, category, id }) => {
         setComment("");
     };
     return (
-        <form className='comment__form' onSubmit={addComment}>
-            <label htmlFor='comment'>Add a comment</label>
+        <form className='cmp-comments__form' onSubmit={addComment}>
+            <label className='cmp-comments__label' htmlFor='comment'>Add a comment</label>
             <textarea
                 placeholder='Type your comment...'
                 value={comment}
@@ -25,9 +25,10 @@ const CommentForm: FC<CommentFormType> = ({ socket, category, id }) => {
                 rows={5}
                 id='comment'
                 name='comment'
+                className='cmp-comments__textarea'
                 required
             ></textarea>
-            <button className='commentBtn'>ADD COMMENT</button>
+            <button className='cmp-comments__btn'>ADD COMMENT</button>
         </form>
     )
 }

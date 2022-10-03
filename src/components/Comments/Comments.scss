@@ -1,0 +1,43 @@
+@import "global/variables";
+
+.cmp-comments {
+    padding: 20px;
+
+    &__section {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    &__label {
+        margin-bottom: 15px;
+    }
+
+    &__textarea {
+        width: 80%;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    &__btn {
+        padding: 10px;
+        width: 200px;
+        background-color: $base-color;
+        outline: none;
+        border: none;
+        color: $white;
+        height: 45px;
+        cursor: pointer;
+    }
+}

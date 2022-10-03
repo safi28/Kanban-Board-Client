@@ -1,0 +1,25 @@
+@import "global/variables";
+
+.cmp-task__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    
+    &__input {
+        margin: 0 5px;
+        width: 50%;
+        padding: 10px 15px;
+    }
+    
+    &__btn {
+        width: 150px;
+        height: 43px;
+        padding: 10px;
+        background-color: $base-color;
+        color: $white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
