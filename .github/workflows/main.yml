@@ -26,4 +26,5 @@ jobs:
           PATTERN: "**/*.scss"
           INDENT_SPACES: 4
       - run: npx stylelint "**/*.scss"
+      - run: npm run lint
 
