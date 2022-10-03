@@ -1,15 +1,15 @@
-import React, { FC, useState } from "react";
-import { CREATE_TASK } from "../../CONSTANTS";
-import { SocketType } from "../../types/socket";
-import "./TaskForm.scss";
+import React, { FC, useState } from 'react';
+import { CREATE_TASK } from '../../CONSTANTS';
+import { SocketType } from '../../types/socket';
+import './TaskForm.scss';
 
 const AddTask: FC<SocketType> = ({ socket }) => {
-    const [task, setTask] = useState("");
+    const [task, setTask] = useState('');
 
     const handleAddTodo = (e: any) => {
         e.preventDefault();
-        socket.emit(CREATE_TASK, { task })
-        setTask("");
+        socket.emit(CREATE_TASK, { task });
+        setTask('');
     };
 
     return (

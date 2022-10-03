@@ -11,5 +11,5 @@ interface ListItemType {
 }
 
 export interface CommentSectionType {
-    commentList: Array<ListItemType>;
+    commentList: ListItemType[];
 }

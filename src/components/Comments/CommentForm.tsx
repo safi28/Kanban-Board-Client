@@ -1,9 +1,9 @@
-import React, { FC, useState } from "react";
-import { ADD_COMMENT } from "../../CONSTANTS";
-import { CommentFormType } from "../../types/comments";
+import React, { FC, useState } from 'react';
+import { ADD_COMMENT } from '../../CONSTANTS';
+import { CommentFormType } from '../../types/comments';
 
 const CommentForm: FC<CommentFormType> = ({ socket, category, id }) => {
-    const [comment, setComment] = useState("");
+    const [comment, setComment] = useState('');
 
     const addComment = (e: any) => {
         e.preventDefault();
@@ -11,13 +11,16 @@ const CommentForm: FC<CommentFormType> = ({ socket, category, id }) => {
             comment,
             category,
             id,
-            userId: localStorage.getItem("userId"),
+            userId: localStorage.getItem('userId'),
         });
-        setComment("");
+        setComment('');
     };
+
     return (
         <form className='cmp-comments__form' onSubmit={addComment}>
-            <label className='cmp-comments__label' htmlFor='comment'>Add a comment</label>
+            <label className='cmp-comments__label' htmlFor='comment'>
+                Add a comment
+            </label>
             <textarea
                 placeholder='Type your comment...'
                 value={comment}
@@ -30,7 +33,7 @@ const CommentForm: FC<CommentFormType> = ({ socket, category, id }) => {
             ></textarea>
             <button className='cmp-comments__btn'>ADD COMMENT</button>
         </form>
-    )
-}
+    );
+};
 
 export default CommentForm;
