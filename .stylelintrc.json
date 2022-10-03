@@ -1,0 +1,17 @@
+{
+    "extends": [
+      "stylelint-config-standard-scss",
+      "stylelint-config-prettier-scss"
+    ],
+    "plugins": [
+        "stylelint-selector-bem-pattern"
+    ],
+    "rules": {
+        "selector-class-pattern": null,
+        "no-duplicate-selectors": true,
+        "indentation": 4,
+        "max-nesting-depth": 2
+    }
+  }
+  
+  

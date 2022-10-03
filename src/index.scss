@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Outfit&display=swap";
 
 * {
-    font-family: 'Outfit', sans-serif;
+    font-family: Outfit, sans-serif;
     box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
 }
+
 body {
     margin: 0;
     padding: 0;
