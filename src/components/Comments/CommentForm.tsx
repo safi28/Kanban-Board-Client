@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import { ADD_COMMENT } from '../../CONSTANTS';
+import taskService from '../../services/task.service';
 import { CommentFormType } from '../../types/comments';
 
 const CommentForm: FC<CommentFormType> = ({ socket, category, id }) => {
@@ -13,6 +14,12 @@ const CommentForm: FC<CommentFormType> = ({ socket, category, id }) => {
             id,
             userId: localStorage.getItem('userId'),
         });
+        taskService.addComment({
+            comment,
+            category,
+            id,
+            userId: localStorage.getItem('userId'),
+        })
         setComment('');
     };
 

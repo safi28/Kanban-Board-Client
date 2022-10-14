@@ -1,5 +1,16 @@
 @import "global/variables";
 
+.cmp-comments-page {
+    padding: 15px;
+
+    &__btn {
+        background: $black;
+        color: $white;
+        padding: 5px 28px;
+        border-radius: 30px;
+    }
+}
+
 .cmp-comments {
     padding: 20px;
 
@@ -33,11 +44,12 @@
     &__btn {
         padding: 10px;
         width: 200px;
+        height: 45px;
         background-color: $base-color;
         outline: none;
         border: none;
+        border-radius: 30px;
         color: $white;
-        height: 45px;
         cursor: pointer;
     }
 }

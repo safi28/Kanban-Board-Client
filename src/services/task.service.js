@@ -13,6 +13,14 @@ class TaskDataService {
         return http.post("/tasks", data);
     }
 
+    addComment(data) {
+        return http.post("/tasks/comment", data);
+    }
+
+    getComments() {
+        return http.get('/tasks/comments');
+    }
+
     update(id, data) {
         return http.put(`/tasks/${id}`, data);
     }

@@ -12,4 +12,10 @@ a {
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/003/484/032/original/modern-abstract-background-design-with-colorful-liquid-shapes-fluid-background-design-for-landing-page-theme-brochure-banner-cover-print-flyer-book-card-or-advertising-vector.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgb(225 230 252 / 51%);
 }

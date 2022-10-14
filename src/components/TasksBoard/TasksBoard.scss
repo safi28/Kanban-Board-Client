@@ -10,7 +10,12 @@
 
     &__title {
         text-align: center;
+        text-align: center;
+        background: #ffffff9e;
         text-transform: capitalize;
+        border: 30px;
+        padding: 10px 15px;
+        border-radius: 30px;
     }
 
     &__completed__wrapper,
