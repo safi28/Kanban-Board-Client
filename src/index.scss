@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Outfit&display=swap";
+@import "global/variables";
 
 * {
     font-family: Outfit, sans-serif;
@@ -13,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url(https://static.vecteezy.com/system/resources/previews/003/484/032/original/modern-abstract-background-design-with-colorful-liquid-shapes-fluid-background-design-for-landing-page-theme-brochure-banner-cover-print-flyer-book-card-or-advertising-vector.jpg);
+    background-image: url($page-background);
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
